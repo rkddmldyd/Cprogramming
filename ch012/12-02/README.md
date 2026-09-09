@@ -81,7 +81,7 @@ return 0;
 
 <img width="1105" height="178" alt="image" src="https://github.com/user-attachments/assets/ec8307bd-80a4-4566-8f4c-ce5197608260" />
 
-&nsbp;
+&nbsp;
 
 # 실습과제 3
 
@@ -156,7 +156,7 @@ return 0;
 
 * 0을 반환하고 메인함수 종료
 
-&nsbp;
+&nbsp;
 
 # 실습과제 5
 
@@ -166,3 +166,78 @@ return 0;
 두 포인터가 가리키는 값을 비교하여, 더 작은 값에는 10을 더하고 더 큰 값에는 10을 빼시오.
 그 후 두 포인터가 가리키는 값을 서로 교환한 뒤 변경된 num1과 num2의 값을 각각 출력하는 프로그램을 작성하시오.
 
+## 소스코드 설명
+
+```
+#include<stdio.h>
+```
+
+* printf 등 라이브러리 객체의 선언을 포함하고 있는 헤더파일 stdio.h를 포함하라
+
+```
+int main(void)
+```
+
+* 메인함수 시작
+
+```
+int num1 = 25, num2 = 40;
+```
+
+* int형 변수 num1의 25 대입, num2의 40 대입
+
+```
+int* ptr1 = &num1;
+int* ptr2 = &num2;
+```
+
+* int형 포인터 변수 ptr1과 ptr2를 선언하고, 각각 num1과 num2의 주소값을 저장
+
+```
+int* small;
+int* big;
+int* temp;
+```
+
+* int형 포인터 변수 small, big, temp 선언
+
+```
+small = (*ptr1 < *ptr2) ? ptr1 : ptr2;
+big = (*ptr1 > *ptr2) ? ptr1 : ptr2;
+```
+
+* ptr1과 ptr2가 가리키는 값을 비교하여, 더 작은 값을 가리키는 포인터의 주소를 small에, 큰 값을 가리키는 포인터 주소를 big에 저장
+
+```
+*small += 10;
+*big -= 10;
+```
+
+* small이 가리키는 값에 10을 더하고, big이 가리키는 값에서 10을 뺀다.
+
+```
+temp = ptr1;
+ptr1 = ptr2;
+ptr2 = temp;
+```
+
+* ptr1에 저장된 주소값을 임시 포인터 변수 temp에 저장한 뒤, ptr2의 주소값을 ptr1에 저장하고, 마지막으로 temp에 저장해 둔 기존 ptr1의 주소값을 ptr2에 저장하여 두 포인터가 가리키는 대상을 서로 바꾼다.
+
+```
+printf("num1 값: %d\n", num1);
+printf("num2 값: %d\n", num2);
+printf("ptr1이 가리키는 값: %d\n", *ptr1);
+printf("ptr2가 가리키는 값: %d\n", *ptr2);
+```
+
+* printf 함수를 이용하여 num1과 num2의 값, 그리고 ptr1과 ptr2가 각각 가리키는 값을 출력
+
+```
+return 0;
+```
+
+* 0을 반환하고 메인함수 종료
+
+# 실행결과
+
+<img width="867" height="149" alt="스크린샷 2026-09-09 200340" src="https://github.com/user-attachments/assets/ce9c1adb-5b54-4c25-87d9-bba7c918dc29" />
