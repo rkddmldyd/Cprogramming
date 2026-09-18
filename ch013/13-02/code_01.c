@@ -1,26 +1,26 @@
 // **********************************************
-// 제 목 : n번째 문자 출력
-// 날 짜 : 2026년 9월 17일
-// 작성자 : 2600172정준석
+// 제 목 : 널문자를 이용한 문자열의 각 문자 출력
+// 날 짜 : 2026년 9월 18일
+// 작성자 : 2600172 정준석
 // **********************************************
 
 #define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable:6031)
 #include <stdio.h>
 
 int main(void)
 {
-	char str[100];
+    char str[100];
+    int i = 0;
 
-	printf("문자열을 입력하시오: ");
-	scanf("%s", str);
+    printf("문자열을 입력하시오: ");
+    if (scanf("%99s", str) != 1)
+        return 1;
 
-	int n = strlen(str);
+    while (str[i] != '\0')
+    {
+        printf("%d번째문자 %c\n", i + 1, str[i]);
+        i++;
+    }
 
-	for (int i = 0; i < n; i++)
-	{
-		printf("%d번째문자 %c \n", i+1, str[i]);
-	}
-
-	return 0;
+    return 0;
 }
