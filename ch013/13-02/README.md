@@ -128,19 +128,8 @@ return 0;
 
 # 실행결과
 
-```text
-문자열을 입력하시오: HelloWorld
-1번째문자 H
-2번째문자 e
-3번째문자 l
-4번째문자 l
-5번째문자 o
-6번째문자 W
-7번째문자 o
-8번째문자 r
-9번째문자 l
-10번째문자 d
-```
+<img width="862" height="209" alt="image" src="https://github.com/user-attachments/assets/c8f715e1-d770-466f-9b15-ac55b841e591" />
+
 
 &nbsp;
 
@@ -194,10 +183,7 @@ return 0;
 
 # 실행결과
 
-```text
-문자열을 입력하시오: HelloWorld
-변환결과: hELLOwORLD
-```
+<img width="859" height="75" alt="image" src="https://github.com/user-attachments/assets/f63f09ee-e7ed-4456-a3ed-4727a398797b" />
 
 &nbsp;
 
@@ -250,11 +236,7 @@ return 0;
 
 # 실행결과
 
-```text
-문자열을 입력하시오: hello
-문자열을 입력하시오: world
-사전에서 앞에 나오는 문자열: hello
-```
+<img width="856" height="88" alt="image" src="https://github.com/user-attachments/assets/cacf23ef-3f40-498f-af28-18a1ab403999" />
 
 &nbsp;
 
@@ -299,6 +281,5 @@ return 0;
 
 # 실행결과
 
-```text
-사전에서 가장 앞에 나오는 문자열: apple
-```
+<img width="866" height="59" alt="image" src="https://github.com/user-attachments/assets/a6a1fa5a-1ed6-499c-a244-80b23190d922" />
+
