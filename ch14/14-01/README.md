@@ -122,10 +122,7 @@ void add2(int* value)
 
 # 실행결과
 
-```text
-정수를 입력 하시오: 15
-2만큼 증가한 값: 17
-```
+<img width="867" height="77" alt="image" src="https://github.com/user-attachments/assets/3dbad48b-a2e4-4997-978e-fade39a6f22e" />
 
 &nbsp;
 
@@ -169,10 +166,7 @@ return 0;
 
 # 실행결과
 
-```text
-정수를 입력 하시오: 15
-2만큼 증가한 값: 17
-```
+<img width="871" height="70" alt="image" src="https://github.com/user-attachments/assets/e8899d6d-5386-4912-b220-31ae90f32b3f" />
 
 &nbsp;
 
@@ -239,13 +233,7 @@ void swap(int* px, int* py, int* pz)
 
 # 실행결과
 
-```text
-정수x를 입력 하시오: 10
-정수y를 입력 하시오: 20
-정수z를 입력 하시오: 30
-swap함수 호출 전 x=10, y=20, z=30
-swap함수 호출 후 x=20, y=30, z=10
-```
+<img width="862" height="118" alt="image" src="https://github.com/user-attachments/assets/d2909ef1-7c46-4cce-a327-7ebd0e2d2244" />
 
 &nbsp;
 
@@ -312,8 +300,4 @@ void multiply_address(int* value)
 
 # 실행결과
 
-```text
-정수를 입력 하시오: 5
-값에 의한 호출 후 num: 5
-주소에 의한 호출 후 num: 500
-```
+<img width="865" height="92" alt="image" src="https://github.com/user-attachments/assets/77f7cdac-7fad-4f33-97ae-73f7a52e7c19" />
