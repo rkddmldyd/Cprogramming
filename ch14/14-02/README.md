@@ -125,7 +125,6 @@ int get_max(const int* array, int n)
 
 ## 소스코드 설명
 
-
 ```c
 int get_data(int* data, int n);
 ```
@@ -174,7 +173,8 @@ for (i = 0; i < 5; i++)
 
 # 실행결과
 
-<!-- 실습과제 3: code_02.c 실행 화면을 여기에 업로드 -->
+<img width="1280" height="173" alt="image" src="https://github.com/user-attachments/assets/3fb7d937-c159-4799-84fa-851d27cab440" />
+
 
 &nbsp;
 
@@ -185,8 +185,6 @@ for (i = 0; i < 5; i++)
 실수를 입력받아 정수부와 소수부를 구하는 함수를 하나 작성한다. 두 결과는 포인터 매개변수를 통해 전달하고, 화면 입력과 출력은 모두 main 함수에서 처리한다.
 
 ## 소스코드 설명
-
-[전체 소스코드](code_03.c)
 
 ```c
 void split_number(double number, int* integer_part, double* fractional_part);
@@ -243,7 +241,8 @@ void split_number(double number, int* integer_part, double* fractional_part)
 
 # 실행결과
 
-<!-- 실습과제 4: code_03.c 실행 화면을 여기에 업로드 -->
+<img width="1280" height="77" alt="image" src="https://github.com/user-attachments/assets/f09cb74d-f492-49bd-b942-99c769857810" />
+
 
 &nbsp;
 
@@ -268,8 +267,6 @@ ShowAllData는 배열의 모든 요소를 출력하는 함수이므로 배열에
 * 함수를 사용하는 사람에게도 배열을 출력만 한다는 의도를 전달한다.
 * arr에 저장된 주소 자체를 변경하지 못하게 하는 `int* const arr`와는 다르다. 또한 호출한 쪽의 원본 배열 자체를 const 배열로 바꾸는 것은 아니다.
 
-이 문제는 const 선언의 목적을 설명하는 서술형 문제이므로 별도의 실행 화면은 필요하지 않다.
-
 &nbsp;
 
 # 도전과제 1
@@ -279,8 +276,6 @@ ShowAllData는 배열의 모든 요소를 출력하는 함수이므로 배열에
 정수 10개를 main 함수에서 입력받아 배열에 저장한다. 홀수만 출력하는 함수와 짝수만 출력하는 함수를 각각 작성하고, 홀수를 먼저 출력한 뒤 짝수를 출력한다.
 
 ## 소스코드 설명
-
-[전체 소스코드](challenge_01.c)
 
 ```c
 void print_odd(const int* array, int n);
@@ -341,7 +336,8 @@ if (array[i] % 2 == 0)
 
 # 실행결과
 
-<!-- 도전과제 1: challenge_01.c 실행 화면을 여기에 업로드 -->
+<img width="1280" height="215" alt="스크린샷 2026-09-29 200705" src="https://github.com/user-attachments/assets/9873649b-92be-4aa4-b1d1-6562c4683bf9" />
+
 
 &nbsp;
 
@@ -352,8 +348,6 @@ if (array[i] % 2 == 0)
 10진수 정수 하나를 입력받아 2진수로 변환하여 출력한다.
 
 ## 소스코드 설명
-
-[전체 소스코드](challenge_02.c)
 
 ```c
 void print_binary(unsigned int number);
@@ -410,7 +404,8 @@ printf("\n");
 
 # 실행결과
 
-<!-- 도전과제 2: challenge_02.c 실행 화면을 여기에 업로드 -->
+<img width="1280" height="72" alt="image" src="https://github.com/user-attachments/assets/b17cc7cf-3eec-4dbe-9ea9-b499526644e9" />
+
 
 &nbsp;
 
@@ -421,8 +416,6 @@ printf("\n");
 정수 10개를 입력받는다. 홀수이면 배열의 앞에서부터, 짝수이면 뒤에서부터 채워 넣고 완성된 배열을 출력한다.
 
 ## 소스코드 설명
-
-[전체 소스코드](challenge_03.c)
 
 ```c
 int data[10];
@@ -452,21 +445,6 @@ else
 * 입력 한 번마다 빈칸을 하나씩 채우므로 10번 입력하면 모든 요소가 채워진다.
 * 홀수는 입력 순서대로, 짝수는 입력 순서의 역순으로 배열에 배치된다.
 
-|입력 순서|입력값|저장 위치|
-|------|---:|---|
-|1|1|data[0]|
-|2|2|data[9]|
-|3|3|data[1]|
-|4|4|data[8]|
-|5|5|data[2]|
-|6|6|data[7]|
-|7|7|data[3]|
-|8|8|data[6]|
-|9|9|data[4]|
-|10|10|data[5]|
-
-따라서 1부터 10까지 입력하면 배열에 1, 3, 5, 7, 9, 10, 8, 6, 4, 2가 저장된다.
-
 ```c
 printf("배열 요소의 출력 :");
 for (i = 0; i < 10; i++)
@@ -478,4 +456,5 @@ printf("\n");
 
 # 실행결과
 
-<!-- 도전과제 3: challenge_03.c 실행 화면을 여기에 업로드 -->
+<img width="1280" height="202" alt="image" src="https://github.com/user-attachments/assets/7210a684-4005-4895-ac00-76e74af11b7d" />
+
