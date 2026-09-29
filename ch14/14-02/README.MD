@@ -56,8 +56,6 @@ int get_max(const int* array, int n);
 
 ## 소스코드 설명
 
-[전체 소스코드](code_01.c)
-
 ```c
 int get_max(const int* array, int n);
 ```
@@ -114,7 +112,7 @@ int get_max(const int* array, int n)
 
 # 실행결과
 
-<!-- 실습과제 2: code_01.c 실행 화면을 여기에 업로드 -->
+
 
 &nbsp;
 
@@ -126,7 +124,6 @@ int get_max(const int* array, int n)
 
 ## 소스코드 설명
 
-[전체 소스코드](code_02.c)
 
 ```c
 int get_data(int* data, int n);
