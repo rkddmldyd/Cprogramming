@@ -112,6 +112,7 @@ int get_max(const int* array, int n)
 
 # 실행결과
 
+<img width="1280" height="128" alt="스크린샷 2026-09-29 195519" src="https://github.com/user-attachments/assets/70c6d4b4-7d17-411c-bc6c-563312882007" />
 
 
 &nbsp;
