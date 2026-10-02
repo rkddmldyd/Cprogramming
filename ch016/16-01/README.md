@@ -16,9 +16,9 @@
 
 ```c
 int a[2][2] = { { 2, 4 }, { 5, -5 } };
-    int b[2][2] = { { -2, 3 }, { 0, -5 } };
-    int result[2][2] = { 0 };
-    int i, j;
+int b[2][2] = { { -2, 3 }, { 0, -5 } };
+int result[2][2] = { 0 };
+int i, j;
 ```
 
 * a와 b에는 문제에 주어진 행렬을 저장하고, result는 덧셈 결과를 저장할 2차원 배열이다.
@@ -26,8 +26,8 @@ int a[2][2] = { { 2, 4 }, { 5, -5 } };
 
 ```c
 for (i = 0; i < 2; i++)
-        for (j = 0; j < 2; j++)
-            result[i][j] = a[i][j] + b[i][j];
+    for (j = 0; j < 2; j++)
+        result[i][j] = a[i][j] + b[i][j];
 ```
 
 * 바깥쪽 반복문은 행을, 안쪽 반복문은 열을 선택한다.
@@ -37,8 +37,8 @@ for (i = 0; i < 2; i++)
 *(*(result + i) + j) = *(*(a + i) + j) + *(*(b + i) + j);
 ```
 
-* a + i는 i번째 행을 가리키고, *(a + i) + j는 그 행의 j번째 요소 주소이다.
-* *(*(a + i) + j)는 a[i][j]와 같은 값을 나타낸다. b와 result에도 같은 원리를 적용한다.
+* `a + i`는 i번째 행을 가리키고, `*(a + i) + j`는 그 행의 j번째 요소 주소이다.
+* `*(*(a + i) + j)`는 `a[i][j]`와 같은 값을 나타낸다. b와 result에도 같은 원리를 적용한다.
 * 배열 표현과 포인터 표현을 주석으로 나누어 한 코드 안에서 모두 계산하고 출력한다.
 
 # 실행결과
@@ -61,8 +61,8 @@ MSVC로 실제 실행한 프로그램의 표준 입력과 출력을 결과 확�
 
 ```c
 int score[3][3];
-    double average[3];
-    int i, j, total, best = 0;
+double average[3];
+int i, j, total, best = 0;
 ```
 
 * score의 행은 학생, 열은 국어·영어·수학 점수를 뜻한다.
@@ -70,19 +70,19 @@ int score[3][3];
 
 ```c
 printf("%d번째 학생의 국어,영어,수학 성적을 입력: ", i + 1);
-        total = 0;
-        for (j = 0; j < 3; j++)
-        {
-            if (scanf("%d", &score[i][j]) != 1)
-                return 1;
-            if (score[i][j] < 0 || score[i][j] > 100)
-            {
-                printf("성적은 0부터 100 사이의 정수를 입력하시오.\n");
-                return 1;
-            }
-            total += score[i][j];
-        }
-        average[i] = total / 3.0;
+total = 0;
+for (j = 0; j < 3; j++)
+{
+    if (scanf("%d", &score[i][j]) != 1)
+        return 1;
+    if (score[i][j] < 0 || score[i][j] > 100)
+    {
+        printf("성적은 0부터 100 사이의 정수를 입력하시오.\n");
+        return 1;
+    }
+    total += score[i][j];
+}
+average[i] = total / 3.0;
 ```
 
 * 학생마다 total을 0으로 초기화한 후 세 과목의 점수를 더한다.
@@ -91,8 +91,8 @@ printf("%d번째 학생의 국어,영어,수학 성적을 입력: ", i + 1);
 
 ```c
 for (i = 1; i < 3; i++)
-        if (average[i] > average[best])
-            best = i;
+    if (average[i] > average[best])
+        best = i;
 ```
 
 * 첫 학생을 기준으로 나머지 학생의 평균을 비교한다.
@@ -100,7 +100,7 @@ for (i = 1; i < 3; i++)
 
 ```c
 printf("최우수 학생은 %d번째 학생이고 평균점수는 %g점이다.\n",
-        best + 1, average[best]);
+    best + 1, average[best]);
 ```
 
 * 배열 인덱스는 0부터 시작하므로 화면 순번은 best + 1로 출력한다.
@@ -132,9 +132,9 @@ MSVC로 실제 실행한 프로그램의 표준 입력과 출력을 결과 확�
 
 ```c
 int arr[3][3] = { { -5, 2, 35 }, { -20, 5, 100 }, { -75, 5, -25 } };
-    int max = arr[0][0];
-    int row = 0, column = 0;
-    int i, j;
+int max = arr[0][0];
+int row = 0, column = 0;
+int i, j;
 ```
 
 * 문제의 행렬을 arr에 저장하고 첫 번째 원소를 초기 최대값으로 정한다.
@@ -143,13 +143,13 @@ int arr[3][3] = { { -5, 2, 35 }, { -20, 5, 100 }, { -75, 5, -25 } };
 
 ```c
 for (i = 0; i < 3; i++)
-        for (j = 0; j < 3; j++)
-            if (arr[i][j] > max)
-            {
-                max = arr[i][j];
-                row = i;
-                column = j;
-            }
+    for (j = 0; j < 3; j++)
+        if (arr[i][j] > max)
+        {
+            max = arr[i][j];
+            row = i;
+            column = j;
+        }
 ```
 
 * 이중 반복문으로 9개 원소를 검사한다.
@@ -157,7 +157,7 @@ for (i = 0; i < 3; i++)
 
 ```c
 printf("최대값은 %d\n", max);
-    printf("위치는 %d행 %d열\n", row + 1, column + 1);
+printf("위치는 %d행 %d열\n", row + 1, column + 1);
 ```
 
 * 최대값 100을 출력하고 행·열 인덱스에 1을 더해 2행 3열로 표시한다.
@@ -182,7 +182,7 @@ char str[4][10]에 문자열 4개를 입력받고, 문자열의 길이를 구하
 
 ```c
 char str[4][10];
-    int i, length;
+int i, length;
 ```
 
 * 행마다 문자열 하나를 저장한다. 각 행은 널 문자를 포함해 10바이트이다.
@@ -190,11 +190,11 @@ char str[4][10];
 
 ```c
 for (i = 0; i < 4; i++)
-    {
-        printf("%d번째 문자열 입력: ", i + 1);
-        if (scanf("%9s", &str[i][0]) != 1)
-            return 1;
-    }
+{
+    printf("%d번째 문자열 입력: ", i + 1);
+    if (scanf("%9s", &str[i][0]) != 1)
+        return 1;
+}
 ```
 
 * &str[i][0]은 i번째 문자열을 저장할 행의 시작 주소이다.
@@ -202,9 +202,9 @@ for (i = 0; i < 4; i++)
 
 ```c
 length = 0;
-        while (str[i][length] != '\0')
-            length++;
-        printf("%d번째 문자열 길이: %d\n", i + 1, length);
+while (str[i][length] != '\0')
+    length++;
+printf("%d번째 문자열 길이: %d\n", i + 1, length);
 ```
 
 * 각 문자열마다 length를 0으로 초기화한다.
@@ -231,7 +231,7 @@ MSVC로 실제 실행한 프로그램의 표준 입력과 출력을 결과 확�
 
 ```c
 char str[4][10];
-    int i, last = 0;
+int i, last = 0;
 ```
 
 * 문자열을 저장할 2차원 배열과 마지막 문자열의 인덱스 last를 선언한다.
@@ -239,11 +239,11 @@ char str[4][10];
 
 ```c
 for (i = 0; i < 4; i++)
-    {
-        printf("%d번째 문자열 입력: ", i + 1);
-        if (scanf("%9s", &str[i][0]) != 1)
-            return 1;
-    }
+{
+    printf("%d번째 문자열 입력: ", i + 1);
+    if (scanf("%9s", &str[i][0]) != 1)
+        return 1;
+}
 ```
 
 * 각 행의 시작 주소에 문자열을 입력한다. 영문 소문자로 시작하는 공백 없는 문자열을 9글자 이내로 입력한다.
@@ -251,8 +251,8 @@ for (i = 0; i < 4; i++)
 
 ```c
 for (i = 1; i < 4; i++)
-        if (str[i][0] > str[last][0])
-            last = i;
+    if (str[i][0] > str[last][0])
+        last = i;
 ```
 
 * 각 문자열의 첫 문자 str[i][0]을 현재 기준의 첫 문자와 비교한다.
@@ -274,6 +274,8 @@ MSVC로 실제 실행한 프로그램의 표준 입력과 출력을 결과 확�
 &nbsp;
 
 ## Visual Studio 실행 방법
+
+[Visual Studio 실행용 ZIP](https://github.com/rkddmldyd/Cprogramming/raw/refs/heads/main/ch016/16-01/Ch16_01_%EA%B3%BC%EC%A0%9C.zip)을 내려받아 압축을 푼 뒤, VisualStudio_Ch16_01 폴더의 Ch16_01.sln을 연다.
 
 각 코드에는 main 함수가 하나씩 있으므로 한 프로젝트에 5개를 동시에 추가하지 않는다. 함께 제공한 Visual Studio 솔루션을 열고 실행할 Code01~Code05 프로젝트를 우클릭하여 **시작 프로젝트로 설정**한 뒤 **Ctrl+F5**로 실행한다.
 
