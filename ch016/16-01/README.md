@@ -272,14 +272,3 @@ printf("사전에서 제일 뒤에 나오는 문자열: %s\n", &str[last][0]);
 MSVC로 실제 실행한 프로그램의 표준 입력과 출력을 결과 확인 페이지에 표시한 화면이다. 입력값과 출력은 구분하여 표시했으며, Visual Studio 콘솔 화면을 캡처한 이미지는 아니다.
 
 &nbsp;
-
-## Visual Studio 실행 방법
-
-[Visual Studio 실행용 ZIP](https://github.com/rkddmldyd/Cprogramming/raw/refs/heads/main/ch016/16-01/Ch16_01_%EA%B3%BC%EC%A0%9C.zip)을 내려받아 압축을 푼 뒤, VisualStudio_Ch16_01 폴더의 Ch16_01.sln을 연다.
-
-각 코드에는 main 함수가 하나씩 있으므로 한 프로젝트에 5개를 동시에 추가하지 않는다. 함께 제공한 Visual Studio 솔루션을 열고 실행할 Code01~Code05 프로젝트를 우클릭하여 **시작 프로젝트로 설정**한 뒤 **Ctrl+F5**로 실행한다.
-
-* Code01, Code03은 입력 없이 실행한다.
-* Code02는 각 학생의 성적 3개씩 입력한다.
-* Code04, Code05는 문자열을 한 개씩 총 4개 입력한다.
-* 소스 파일만 직접 사용할 때는 빈 콘솔 프로젝트에 원하는 .c 파일 하나를 추가한다. 한글이 깨지면 소스의 문자 집합과 실행 문자 집합을 UTF-8로 설정하고, 실행 터미널도 UTF-8로 사용한다.
