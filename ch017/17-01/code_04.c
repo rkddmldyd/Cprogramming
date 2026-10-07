@@ -6,7 +6,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// 함수선언
 void MaxAndMin(int* arr, int len, int** pmax, int** pmin);
 
 int main(void)
@@ -15,7 +14,7 @@ int main(void)
     int* minPtr = NULL;
     int arr[5] = { 10, 30, 50, 20, 40 };
 
-    MaxAndMin(arr, 5, &maxPtr, &minPtr); // 함수호출
+    MaxAndMin(arr, 5, &maxPtr, &minPtr);
 
     printf("최댓값: %d\n", *maxPtr);
     printf("최솟값: %d\n", *minPtr);
@@ -23,7 +22,6 @@ int main(void)
     return 0;
 }
 
-// 함수정의
 void MaxAndMin(int* arr, int len, int** pmax, int** pmin)
 {
     int i;

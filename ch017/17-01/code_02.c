@@ -6,7 +6,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// 함수선언
 int get_max(int** ptrarr, int count);
 
 int main(void)
@@ -15,13 +14,12 @@ int main(void)
     int* ptrarr[3] = { &num1, &num2, &num3 };
     int max;
 
-    max = get_max(ptrarr, 3); // 함수호출
+    max = get_max(ptrarr, 3);
     printf("최댓값:%d\n", max);
 
     return 0;
 }
 
-// 함수정의
 int get_max(int** ptrarr, int count)
 {
     int max = *ptrarr[0];

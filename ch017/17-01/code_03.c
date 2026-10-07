@@ -6,7 +6,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// 함수선언
 void prn_str(char** ptrarr, int count);
 
 int main(void)
@@ -15,12 +14,11 @@ int main(void)
     int count;
 
     count = (int)(sizeof(ptrarr) / sizeof(ptrarr[0]));
-    prn_str(ptrarr, count); // 함수호출
+    prn_str(ptrarr, count);
 
     return 0;
 }
 
-// 함수정의
 void prn_str(char** ptrarr, int count)
 {
     int i;
