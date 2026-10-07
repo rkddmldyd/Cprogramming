@@ -91,7 +91,8 @@ return max;
 
 # 실행결과
 
-<img width="1707" height="1019" alt="image" src="https://github.com/user-attachments/assets/9392076a-ccc6-47d9-a4e5-88d4afbb0d49" />
+<img width="865" height="59" alt="image" src="https://github.com/user-attachments/assets/6d03faca-bf2e-4ad5-bfad-bd19603cc786" />
+
 
 &nbsp;
 
@@ -145,7 +146,8 @@ void prn_str(char** ptrarr, int count)
 
 # 실행결과
 
-<img width="1707" height="1019" alt="image" src="https://github.com/user-attachments/assets/07f1fe80-fb06-4783-b66f-73d3b0402979" />
+<img width="863" height="89" alt="image" src="https://github.com/user-attachments/assets/eb855f25-6932-4539-b178-c812d18d1f61" />
+
 
 &nbsp;
 
@@ -314,4 +316,5 @@ minPtr [1000] ──> arr[0] [10]
 
 # 실행결과
 
-<img width="1707" height="1019" alt="image" src="https://github.com/user-attachments/assets/6f9e77a2-9926-4b5a-828d-ce9bbc195955" />
+<img width="859" height="65" alt="image" src="https://github.com/user-attachments/assets/a67d48ab-a63f-4257-8b8b-338a80da95e1" />
+
