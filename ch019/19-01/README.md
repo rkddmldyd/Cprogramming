@@ -190,6 +190,8 @@ while (top <= bottom && left <= right)
 
 # 실행결과
 
+<img width="1140" height="161" alt="result05" src="https://github.com/user-attachments/assets/de81e2ac-3bce-4442-a5d9-0bdaef55a4e9" />
+
 
 
 &nbsp;
