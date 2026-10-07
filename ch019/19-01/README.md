@@ -124,3 +124,91 @@ Calculate(operation);
 
 <img width="1154" height="123" alt="result03" src="https://github.com/user-attachments/assets/c4da3b2f-e8f5-44b4-9d8e-b5617e59803a" />
 
+
+&nbsp;
+
+# 도전문제 1
+
+## 문제
+
+4×4 정수 배열을 1부터 16까지 초기화하고, 오른쪽으로 90도씩 회전한 결과를 출력한다.
+
+## 소스코드 설명
+
+```c
+for (i = 0; i < 4; i++)
+    for (j = 0; j < 4; j++)
+        temp[j][3 - i] = arr[i][j];
+for (i = 0; i < 4; i++)
+    for (j = 0; j < 4; j++)
+        arr[i][j] = temp[i][j];
+```
+
+* 원래 위치 [i][j]의 값을 [j][3-i]로 옮겨 오른쪽으로 90도 회전한다.
+* 임시 배열에 저장한 뒤 원래 배열에 복사한다. 이를 세 번 반복하여 90도, 180도, 270도 결과를 출력한다.
+
+# 실행결과
+
+<img width="1155" height="483" alt="result04" src="https://github.com/user-attachments/assets/8ca8d5e2-67e1-436c-aa36-f694848a5f4c" />
+
+&nbsp;
+
+# 도전문제 2
+
+## 문제
+
+숫자 n을 입력받아 n×n 달팽이 배열을 만들고 출력한다.
+
+## 소스코드 설명
+
+```c
+while (top <= bottom && left <= right)
+{
+    for (i = left; i <= right; i++)
+        arr[top][i] = value++;
+    top++;
+    for (i = top; i <= bottom; i++)
+        arr[i][right] = value++;
+    right--;
+    if (top <= bottom)
+    {
+        for (i = right; i >= left; i--)
+            arr[bottom][i] = value++;
+        bottom--;
+    }
+    if (left <= right)
+    {
+        for (i = bottom; i >= top; i--)
+            arr[i][left] = value++;
+        left++;
+    }
+}
+```
+
+* 오른쪽, 아래, 왼쪽, 위 순서로 숫자를 채운다.
+* 한 방향을 채울 때마다 범위를 줄여 안쪽으로 이동한다. n은 1부터 100까지 입력할 수 있다.
+
+# 실행결과
+
+
+
+&nbsp;
+
+# 도전문제 3
+
+## 문제
+
+rand 함수를 이용해 0 이상 99 이하의 난수를 5개 출력한다.
+
+## 소스코드 설명
+
+```c
+for (i = 0; i < 5; i++)
+    printf("난수 출력: %d\n", rand() % 100);
+```
+
+* rand의 반환값을 100으로 나눈 나머지는 0부터 99까지이므로 이 값을 다섯 번 출력한다.
+
+# 실행결과
+
+<img width="1155" height="162" alt="result06" src="https://github.com/user-attachments/assets/9cacbcf4-5088-4704-b9e1-938135eb51d9" />
